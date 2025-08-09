@@ -65,7 +65,9 @@ PrintHex：以十六进制格式打印数据，便于查看哈希结果
 
 ## 运行示例
 程序执行结果如下：
-<img width="600" height="140" alt="result" src="" />
+
+<img width="400" height="133" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project4/project4-b.png" />
+
 测试消息的 SM3 哈希值
 原始消息哈希、伪造哈希和实际哈希的对比
 攻击是否成功的验证结果
