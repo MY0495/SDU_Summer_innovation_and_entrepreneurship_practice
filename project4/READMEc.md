@@ -11,7 +11,7 @@ Merkle Tree 的主要结构如下：
 
 ## 核心代码解释
 ### MerkleTree 类
-
+```
 class MerkleTree:
     def __init__(self, leaves: List[bytes]):
         self.tree = self._build_tree(leaves)
@@ -20,9 +20,10 @@ class MerkleTree:
         self.leaves = self.tree[0] if self.tree else []
 __init__ 方法初始化Merkle树，接受叶子节点（哈希值）并构建树结构。
 _build_tree 是内部辅助方法，负责构建完整的树结构并返回每一层的节点。
+```
 
 ### 构建树
-
+```
 def _build_tree(self, leaves: List[bytes]) -> List[List[bytes]]:
     if not leaves:
         return []
@@ -40,9 +41,10 @@ def _build_tree(self, leaves: List[bytes]) -> List[List[bytes]]:
         current_level = next_level
         
     return tree
+```
 该方法通过不断合并当前层节点的哈希，生成上一层的父节点，直至只剩下一个根哈希。
 ### 存在性证明
-
+```
 def get_inclusion_proof(self, index: int) -> List[Tuple[bytes, bool]]:
     # 生成存在性证明：返回(兄弟节点哈希, 是否为左兄弟)的列表
 该方法生成给定索引的叶子节点的存在性证明，返回兄弟节点的哈希列表及其相对位置。
@@ -58,19 +60,21 @@ def verify_inclusion(
 ) -> bool:
     # 验证存在性证明
     ...
+```
 该静态方法用来验证生成的存在性证明是否有效。
 
 ### 不存在性证明
-
+```
 def get_exclusion_proof(self, target_index: int) -> Tuple[
     Optional[Tuple[int, List[Tuple[bytes, bool]]]],
     Optional[Tuple[int, List[Tuple[bytes, bool]]]]
 ]:
     # 生成不存在性证明：返回左右邻居的存在性证明
+```
 该方法为超出范围的目标索引生成左右邻居的存在性证明。
 
 ### 验证不存在性
-
+```
 @staticmethod
 def verify_exclusion(
     target_index: int,
@@ -80,12 +84,14 @@ def verify_exclusion(
     root_hash: bytes
 ) -> bool:
     # 验证不存在性证明
+```
 验证给定索引的不存在性证明，以确定其确实不在Merkle树中。
-使用示例
+
+### 使用示例
 生成并验证Merkle树
 在 __main__ 中，示例代码如下：
 
-
+```
 if __name__ == "__main__":
     leaves = generate_large_leaves(100000)
     merkle_tree = MerkleTree(leaves)
@@ -98,6 +104,7 @@ if __name__ == "__main__":
     ex_index = 100007  # 超出10万叶子的范围
     left_proof, right_proof = merkle_tree.get_exclusion_proof(ex_index)
     ex_valid = MerkleTree.verify_exclusion(ex_index, left_proof, right_proof, leaves, merkle_tree.root)
+```
 此示例生成10万个叶子节点，构建Merkle树，并测试存在性与不存在性证明的验证。
 
 ## 结论
