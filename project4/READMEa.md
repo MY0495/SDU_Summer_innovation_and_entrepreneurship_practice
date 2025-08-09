@@ -76,11 +76,11 @@ int main()
 使用示例
 
 ## 运行结果
-<img width="600" height="140" alt="result" src="" />
+<img width="600" height="140" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project4/project4-a.png" />
 
 
 
 ## 结论
-本实现严格遵循 GM/T 0004-2012 标准，完整实现了 SM3 哈希算法的核心功能。通过高精度计时可评估算法性能，适用于需要国密算法支持的信息安全场景。代码结构清晰，注释详尽，便于理解和二次开发。
+本实现严格遵循 GM/T 0004-2012 标准，完整实现了 SM3 哈希算法的核心功能。通过高精度计时可评估算法性能，适用于需要国密算法支持的信息安全场景。
 ## 参考标准
 《GM/T 0004-2012 密码杂凑算法 SM3》
