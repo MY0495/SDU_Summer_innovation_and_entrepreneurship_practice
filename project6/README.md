@@ -57,7 +57,7 @@ bash python project6.py
 ```
 
 ## 运行结果：
-
+<img width="400" height="133" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project6/project6.png" />
 ## 安全特性
 ### 隐私保护：
 参与方 1 无法获取参与方 2 的非交集标识符及对应数值
