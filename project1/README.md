@@ -98,8 +98,10 @@ F = T0[b0] ⊕ T1[b1] ⊕ T2[b2] ⊕ T3[b3]
 ### 4. 结果对比
 #### BASE：
 <img width="400" height="133" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project1/SM4base.png" />
+
 #### T-table：
 <img width="400" height="133" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project1/SM4table.png" />
+
 #### SIMD：
 <img width="400" height="133" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project1/SM4SIMD.png" />
 
