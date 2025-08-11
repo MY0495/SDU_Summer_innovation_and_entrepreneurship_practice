@@ -58,15 +58,19 @@ bash python project6.py
 
 ## 运行结果：
 <img width="400" height="133" alt="result" src="https://github.com/MY0495/SDU_Summer_innovation_and_entrepreneurship_practice/blob/main/project6/project6.png" />
+
 ## 安全特性
+
 ### 隐私保护：
 参与方 1 无法获取参与方 2 的非交集标识符及对应数值
 参与方 2 无法获取参与方 1 的非交集标识符
 双方均无法获取对方的私有密钥
+
 ### 安全性基础：
 基于 DDH 假设保证群运算的安全性
 同态加密确保求和过程中数值的保密性
 数据打乱机制防止通过顺序推断信息
+
 ## 注意事项
 本实现为演示用，使用了简化的加密方案和参数
 实际生产环境中应使用更大的质数、更安全的加密算法（如 Paillier）
